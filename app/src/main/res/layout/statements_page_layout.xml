@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statements_Page"
+    android:background="@drawable/background_img"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/dashboardScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="0sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="80sp"
+            android:orientation="vertical"
+            android:paddingBottom="80sp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="32sp">
+
+                <TextView
+                    android:id="@+id/dashboardText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Generate Statements"
+                    android:textColor="@color/white"
+                    android:textSize="27sp" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12sp"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="6sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16sp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose an option"
+                        android:textColor="@color/mainColor"
+                        android:textSize="21sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12sp"
+                app:cardElevation="6sp">
+
+                <TabHost
+                    android:id="@+id/tabhost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/mainColor" />
+
+
+                        <FrameLayout
+                            android:id="@android:id/tabcontent"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <!--For Tab 1-->
+                            <LinearLayout
+                                android:id="@+id/tab1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="6sp"
+                                    android:text="Generate Statements: Kids"
+                                    android:textColor="@color/mainColor"
+                                    android:textSize="22sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:padding="5sp">
+
+                                    <Button
+                                        android:id="@+id/buttonOne"
+                                        android:layout_width="120sp"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="#AA5AFF"
+                                        android:text="One" />
+
+                                    <Button
+                                        android:id="@+id/buttonAll"
+                                        android:layout_width="121sp"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/mainColor"
+                                        android:text="All" />
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <!--Scroll view for ONE -->
+                                    <ScrollView
+                                        android:id="@+id/ScrollView1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="20dp">
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="10sp"
+                                                android:gravity="center"
+                                                android:text="Enter child ID:"
+                                                android:textColor="@color/mainColor"
+                                                android:textSize="20sp" />
+
+                                            <EditText
+                                                android:id="@+id/statement_child_id"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@+id/enrol"
+                                                android:layout_margin="1dp"
+                                                android:hint="ID: 123456"
+                                                android:inputType="number"
+                                                android:maxLength="7"
+                                                android:padding="20dp"
+                                                android:textColor="@color/black" />
+
+                                            <Button
+                                                android:id="@+id/generate_one_statement_btn"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@color/mainColor"
+                                                android:text="Generate Statement" />
+
+                                            <LinearLayout
+                                                android:id="@+id/statement_layout"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:padding="15sp">
+
+                                                <com.google.android.material.textfield.TextInputLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:hint="ID:">
+
+                                                    <com.google.android.material.textfield.TextInputEditText
+                                                        android:id="@+id/one_kid_id"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="123456" />
+                                                </com.google.android.material.textfield.TextInputLayout>
+
+                                                <com.google.android.material.textfield.TextInputLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:hint="Full Name:">
+
+                                                    <com.google.android.material.textfield.TextInputEditText
+                                                        android:id="@+id/one_kid_fullName"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="Michael Jordan" />
+                                                </com.google.android.material.textfield.TextInputLayout>
+
+                                                <com.google.android.material.textfield.TextInputLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:hint="Fees:">
+
+                                                    <com.google.android.material.textfield.TextInputEditText
+                                                        android:id="@+id/one_kid_fees"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:text="$200" />
+                                                </com.google.android.material.textfield.TextInputLayout>
+
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/else_error"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="horizontal">
+
+                                                <TextView
+                                                    android:id="@+id/ERROR"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="10sp"
+                                                    android:gravity="center"
+                                                    android:text="ID does not exist"
+                                                    android:textColor="@color/mainColor"
+                                                    android:textSize="20sp" />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </ScrollView>
+
+                                    <!--Scroll view for ALL -->
+                                    <LinearLayout
+                                        android:id="@+id/ScrollView2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:visibility="invisible">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="20dp">
+
+                                            <Button
+                                                android:id="@+id/generate_one_statement_btnALL"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:backgroundTint="@color/mainColor"
+                                                android:text="Generate Statement" />
+
+                                            <LinearLayout
+                                                android:id="@+id/statement_layoutALL"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical"
+                                                android:padding="15sp">
+
+                                                <ListView
+                                                    android:id="@+id/all_statements_list"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    />
+
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </RelativeLayout>
+
+                            </LinearLayout> <!-- Tab 1 ends -->
+
+                            <!--For Tab 2-->
+                            <LinearLayout
+                                android:id="@+id/tab2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginTop="6sp"
+                                    android:text="Generate Statements: Cash Flow"
+                                    android:textColor="@color/mainColor"
+                                    android:textSize="22sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:padding="5sp">
+
+                                    <Button
+                                        android:id="@+id/buttonIncome"
+                                        android:layout_width="120sp"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="#AA5AFF"
+                                        android:text="Income" />
+
+                                    <Button
+                                        android:id="@+id/buttonExpenses"
+                                        android:layout_width="121sp"
+                                        android:layout_height="wrap_content"
+                                        android:backgroundTint="@color/mainColor"
+                                        android:text="Expenses" />
+
+                                </LinearLayout>
+
+                                <!-- EXPENSES PAGE -->
+
+                                <LinearLayout
+                                    android:visibility="gone"
+                                    android:id="@+id/ExpensesPageXML"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/Monthly_Rev1"
+                                        android:paddingBottom="10sp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="6sp"
+                                        android:text="Monthly Expenses"
+                                        android:textColor="@color/mainColor"
+                                        android:textSize="20sp" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/EXIncomeNumbers"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:gravity="center_horizontal"
+                                        >
+
+                                        <TextView
+                                            android:id="@+id/EXt1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Rent"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:padding="7sp"/>
+
+                                        <EditText
+                                            android:id="@+id/RentNum"
+                                            android:paddingLeft="134sp"
+                                            android:layout_toRightOf="@+id/EXt1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="25000"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:id="@+id/EXt2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/EXt1"
+                                            android:text="Utility bills"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:padding="7sp"/>
+
+                                        <EditText
+                                            android:id="@+id/UtilityNum"
+                                            android:paddingLeft="87sp"
+                                            android:layout_toRightOf="@+id/EXt2"
+                                            android:layout_below="@id/EXt1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="6000"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:id="@+id/EXt3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/EXt2"
+                                            android:text="Human Resources"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:padding="7sp"/>
+
+                                        <EditText
+                                            android:id="@+id/HumanNum"
+                                            android:paddingLeft="16sp"
+                                            android:layout_toRightOf="@+id/EXt3"
+                                            android:layout_below="@id/EXt2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="3600"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:id="@+id/EXt4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/EXt3"
+                                            android:text="Buses"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:padding="7sp"/>
+
+                                        <EditText
+                                            android:id="@+id/BusNum"
+                                            android:paddingLeft="120sp"
+                                            android:layout_toRightOf="@+id/EXt4"
+                                            android:layout_below="@id/EXt3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="4400"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:id="@+id/EXt5"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/EXt4"
+                                            android:text="Employee Salaries"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:padding="7sp"/>
+
+                                        <EditText
+                                            android:id="@+id/EmployeeNum"
+                                            android:paddingLeft="17sp"
+                                            android:layout_toRightOf="@+id/EXt5"
+                                            android:layout_below="@id/EXt4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="12000"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/ADD1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/EXt5"
+                                            android:hint="Title"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:maxLength="14" />
+
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/NUM1"
+                                            android:paddingLeft="23sp"
+                                            android:layout_toRightOf="@+id/ADD1"
+                                            android:layout_below="@id/EmployeeNum"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Cost"
+                                            android:textColor="@color/black"
+                                            android:layout_marginTop="-6.3sp"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/ADD2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/ADD1"
+                                            android:hint="Title"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:maxLength="14" />
+
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/NUM2"
+                                            android:paddingLeft="23sp"
+                                            android:layout_toRightOf="@+id/ADD1"
+                                            android:layout_below="@id/NUM1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Cost"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/ADD3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/ADD2"
+                                            android:hint="Title"
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"
+                                            android:maxLength="14" />
+
+                                        <EditText
+                                            android:visibility="gone"
+                                            android:id="@+id/NUM3"
+                                            android:paddingLeft="23sp"
+                                            android:layout_toRightOf="@+id/ADD1"
+                                            android:layout_below="@id/NUM2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:hint="Cost"
+                                            android:textColor="@color/black"
+                                            android:maxLength="8"
+                                            android:inputType="number"
+                                            android:textSize="19sp"/>
+
+                                        <Button
+                                            android:id="@+id/AddButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/ADD3"
+                                            android:text="ADD"
+                                            android:layout_margin="23sp"
+                                            android:backgroundTint="@color/mainColor"
+                                            />
+
+                                        <Button
+                                            android:id="@+id/UpdateButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_toRightOf="@id/AddButton"
+                                            android:layout_below="@+id/ADD3"
+                                            android:text="UPDATE"
+                                            android:layout_margin="23sp"
+                                            android:backgroundTint="@color/mainColor"
+                                            />
+
+
+                                    </RelativeLayout>
+
+                                    <!-- Date input -->
+
+                                    <RelativeLayout
+                                        android:id="@+id/EXdate"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5sp">
+
+                                        <TextView
+                                            android:paddingTop="10sp"
+                                            android:id="@+id/EXT1_Month"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="   Monthly expense: "
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp" />
+
+                                        <TextView
+                                            android:paddingTop="10sp"
+                                            android:layout_toRightOf="@id/EXT1_Month"
+                                            android:id="@+id/EXMonthly_Num"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" 51000"
+                                            android:textColor="@color/black"
+                                            android:textSize="19sp" />
+
+                                        <TextView
+                                            android:paddingTop="8sp"
+                                            android:id="@+id/EXT1_Year"
+                                            android:layout_below="@id/EXT1_Month"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="   Yearly expense: "
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp" />
+
+                                        <TextView
+                                            android:paddingTop="8sp"
+                                            android:layout_below="@+id/EXMonthly_Num"
+                                            android:layout_toRightOf="@id/EXT1_Year"
+                                            android:id="@+id/EXYearly_Num"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text=" 612000"
+                                            android:textColor="@color/black"
+                                            android:textSize="19sp" />
+
+                                    </RelativeLayout> <!-- Date end -->
+
+                                </LinearLayout> <!-- Expenses ends -->
+
+                                <!-- Income Page -->
+                                <LinearLayout
+                                    android:id="@+id/IncomePage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    >
+
+                                    <TextView
+                                        android:paddingTop="23sp"
+                                        android:paddingBottom="15sp"
+                                        android:id="@+id/Monthly_Rev"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="6sp"
+                                        android:text="Monthly Revenue"
+                                        android:textColor="@color/mainColor"
+                                        android:textSize="20sp" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/IncomeNumbers"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:gravity="center_horizontal"
+                                        >
+
+                                        <TextView
+                                            android:id="@+id/t1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Customers income:   "
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:layout_toRightOf="@+id/t1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="15000 AED"
+                                            android:textColor="@color/black"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:paddingTop="12sp"
+                                            android:id="@+id/t2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/t1"
+                                            android:text="Monthly income:   "
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:paddingTop="12sp"
+                                            android:layout_toRightOf="@+id/t2"
+                                            android:layout_below="@id/t1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="15000 AED"
+                                            android:textColor="@color/black"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:paddingTop="12sp"
+                                            android:id="@+id/t3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/t2"
+                                            android:text="Yearly income:   "
+                                            android:textColor="@color/mainColor"
+                                            android:textSize="19sp"/>
+
+                                        <TextView
+                                            android:paddingTop="12sp"
+                                            android:layout_toRightOf="@+id/t3"
+                                            android:layout_below="@id/t2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="180000 AED"
+                                            android:textColor="@color/black"
+                                            android:textSize="19sp"/>
+
+
+                                    </RelativeLayout>
+
+                                    <!-- Date input -->
+
+
+
+
+
+
+                                </LinearLayout> <!-- Income ends -->
+
+
+                            </LinearLayout> <!-- Tab 2 ends -->
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                </TabHost>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/container_bottom_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        />
+
+
+</RelativeLayout>

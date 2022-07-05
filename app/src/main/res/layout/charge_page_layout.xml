@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_img"
+    tools:context=".Charge_Page">
+
+    <TextView
+        android:id="@+id/charge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="70dp"
+        android:gravity="center"
+        android:text="Charge Kid"
+        android:textColor="@color/white"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_below="@+id/charge"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20sp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/firstNameATV"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:hint="Enter first name" />
+
+        <AutoCompleteTextView
+            android:id="@+id/lastNameATV"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginTop="30sp"
+            android:hint="Enter last name" />
+
+        <AutoCompleteTextView
+            android:id="@+id/kidIdATV"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:layout_marginTop="30sp"
+            android:inputType="number"
+            android:maxLength="7"
+            android:hint="Enter ID" />
+
+        <Spinner
+            android:id="@+id/numHoursSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="40sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50sp"
+            android:background="@android:drawable/btn_dropdown"
+            android:dropDownWidth="100sp"
+            android:spinnerMode="dropdown" />
+
+        <AutoCompleteTextView
+            android:id="@+id/discountCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:hint="Enter discount code (optional)"
+            android:minHeight="48dp"
+            android:layout_gravity="center" />
+
+        <Button
+            android:id="@+id/chargeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Charge"
+            android:layout_marginTop="20sp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container_bottom_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </FrameLayout>
+
+
+</RelativeLayout>

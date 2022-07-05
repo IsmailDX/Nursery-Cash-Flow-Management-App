@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_img"
+    tools:context=".Kids_Page">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:text="Kids"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/displayKidsBtn"
+            android:layout_width="180sp"
+            android:layout_height="55sp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="204dp"
+            android:text="Display Kids Info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/enrolKidBtn"
+            android:layout_width="180sp"
+            android:layout_height="55sp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="38dp"
+            android:text="Enrol Kid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayKidsBtn" />
+
+        <Button
+            android:id="@+id/chargeKidBtn"
+            android:layout_width="180sp"
+            android:layout_height="55sp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="38dp"
+            android:text="Charge Kid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enrolKidBtn" />
+
+        <Button
+            android:id="@+id/updateKidBtn"
+            android:layout_width="180sp"
+            android:layout_height="55sp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="38dp"
+            android:text="Update Kid Info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chargeKidBtn" />
+
+        <Button
+            android:id="@+id/unenrollKidBtn"
+            android:layout_width="180sp"
+            android:layout_height="55sp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="38dp"
+            android:text="Unenroll Kid"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateKidBtn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/container_bottom_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+    </FrameLayout>
+
+</RelativeLayout>

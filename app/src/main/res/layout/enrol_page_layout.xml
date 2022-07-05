@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_img"
+    tools:context=".Enrol_Page">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:id="@+id/enrol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="70dp"
+                android:gravity="center"
+                android:text="Enrol Kid"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/childId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/enrol"
+                android:layout_margin="1dp"
+                android:hint="ID: 123456"
+                android:padding="20dp"
+                android:inputType="number"
+                android:maxLength="7"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/childFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childId"
+                android:layout_margin="1dp"
+                android:hint="First name: Zac"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/childLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childFirstName"
+                android:layout_margin="1dp"
+                android:hint="Last name: Efron"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/childAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childLastName"
+                android:layout_margin="1dp"
+                android:hint="Age: 8"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/childGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childAge"
+                android:layout_margin="1dp"
+                android:hint="Gender: Male"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/childAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childGender"
+                android:layout_margin="1dp"
+                android:hint="Address (child): Abu Dhabi Corniche"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/guardianName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/childAddress"
+                android:layout_margin="1dp"
+                android:hint="Guardian name: Michael Jordan"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/guardianMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guardianName"
+                android:layout_margin="1dp"
+                android:hint="Guardian number: +971561239788"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/guardianEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guardianMobileNumber"
+                android:layout_margin="1dp"
+                android:hint="Guardian email: michael_jordan@outlook.com"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/guardianAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guardianEmail"
+                android:layout_margin="1dp"
+                android:hint="Address (guardian): Dubai, Deira"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/enrolButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guardianAddress"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:backgroundTint="@color/mainColor"
+                android:text="ENROL" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/container_bottom_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

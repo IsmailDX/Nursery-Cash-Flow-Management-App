@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_img"
+    tools:context=".Update_Page">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="50dp">
+
+            <TextView
+                android:id="@+id/update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:gravity="center"
+                android:text="Update Kid"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/update_child_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="ID: 123456"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:inputType="number"
+                android:maxLength="7"/>
+
+            <Button
+                android:id="@+id/load_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOAD DATA"
+                android:backgroundTint="@color/mainColor"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"/>
+
+            <EditText
+                android:id="@+id/update_child_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="First Name: Zac"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/update_child_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Last Name: Efron"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/update_child_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Age: 9"
+                android:padding="20dp"
+                android:textColor="@color/black"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/update_child_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Gender: Male"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/update_child_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Address(child): Dubai"
+                android:padding="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/update_guardian_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Guardian Name: Michael Jordan"
+                android:padding="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/update_guardian_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Mobile Number: 0509997722"
+                android:padding="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/update_guardian_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Email: guardian@gmail.com"
+                android:padding="20dp"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/update_guardian_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:hint="Address: Abu Dhabi"
+                android:padding="20dp"
+                android:textColor="@color/black"/>
+
+            <Button
+                android:id="@+id/update_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UPDATE"
+                android:backgroundTint="@color/mainColor"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/container_bottom_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

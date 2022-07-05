@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/display_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15sp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID:"
+        android:layout_marginBottom="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kid_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="123456"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name:"
+        android:layout_marginBottom="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kid_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zac"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fees:"
+        android:layout_marginBottom="1dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kid_fees"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="100"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+</LinearLayout>
